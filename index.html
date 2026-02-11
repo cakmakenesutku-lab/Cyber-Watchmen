@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Watchmen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="about.html">Hakkımızda</a>
+<a href="team.html">Takım</a>
+<a href="contact.html">İletişim</a>
+</nav>
+<audio id="bgMusic" loop autoplay muted>
+    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", function() {
+    const music = document.getElementById("bgMusic");
+    music.play().then(() => {
+        music.muted = false; // başladıktan sonra sesi açar
+    }).catch(err => {
+        console.log("Autoplay engellendi");
+    });
+});
+</script>
+
+<header>
+<img src="WhatsApp_Image_2026-02-11_at_20.23.14-removebg-preview.png" class="logo">
+<h1>CYBER WATCHMEN</h1>
+<p>Dijital Dünyanın Koruyucuları</p>
+<button onclick="startMusic()">Sistemi Başlat</button>
+<div class="system-message">✔ Sistem Aktif Edildi</div>
+</header>
+
+<section>
+<h2>Misyonumuz</h2>
+<p>Genç ve dinamik bir siber güvenlik ekibi olarak dijital dünyayı korumayı hedefliyoruz.</p>
+</section>
+
+<footer>
+© 2026 Cyber Watchmen
+</footer>
+
+<script src="script.js"></script>
+</body>
+<video autoplay muted loop id="bgVideo">
+  <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
+</video>
+
+<style>
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>
+
+</html>

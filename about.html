@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Hakkımızda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="about.html">Hakkımızda</a>
+<a href="team.html">Takım</a>
+<a href="contact.html">İletişim</a>
+</nav>
+<audio id="bgMusic" loop autoplay muted>
+    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", function() {
+    const music = document.getElementById("bgMusic");
+    music.play().then(() => {
+        music.muted = false; // başladıktan sonra sesi açar
+    }).catch(err => {
+        console.log("Autoplay engellendi");
+    });
+});
+</script>
+<section>
+<h1>Hakkımızda</h1>
+<p>Cyber Watchmen, etik siber güvenlik çalışmaları yapan genç bir ekip topluluğudur.</p>
+<p>CTF yarışmaları, OSINT analizleri ve savunma teknikleri üzerine çalışır.</p>
+</section>
+
+<footer>
+© 2026 Cyber Watchmen
+</footer>
+
+<script src="script.js"></script>
+</body>
+<video autoplay muted loop id="bgVideo">
+  <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
+</video>
+
+<style>
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+</style>
+
+</body>
+</html>
