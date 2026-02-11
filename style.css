@@ -106,3 +106,34 @@ footer{
     padding:20px;
     background:#111827;
 }
+/* ===== Responsive Ayarlar ===== */
+
+@media (max-width: 768px){
+
+    nav{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .logo{
+        width:160px;
+    }
+
+    header{
+        padding:50px 15px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    section{
+        padding:40px 15px;
+    }
+
+    .card{
+        width:90%;
+    }
+
+}
