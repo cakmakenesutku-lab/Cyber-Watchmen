@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Hakkımızda</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Watchmen | Hakkımızda</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="about.html">Hakkımızda</a>
-<a href="team.html">Takım</a>
-<a href="contact.html">İletişim</a>
-</nav>
-<audio id="bgMusic" loop autoplay muted>
-    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
-</audio>
+  <video autoplay muted loop id="bgVideo">
+    <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
+  </video>
 
-<script>
-window.addEventListener("load", function() {
-    const music = document.getElementById("bgMusic");
-    music.play().then(() => {
-        music.muted = false; // başladıktan sonra sesi açar
-    }).catch(err => {
-        console.log("Autoplay engellendi");
-    });
-});
-</script>
-<section>
-<h1>Hakkımızda</h1>
-<p>Cyber Watchmen, etik siber güvenlik çalışmaları yapan genç bir ekip topluluğudur.</p>
-<p>CTF yarışmaları, OSINT analizleri ve savunma teknikleri üzerine çalışır.</p>
-</section>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="about.html" class="nav-link active">Hakkımızda</a>
+        <a href="team.html" class="nav-link">Takım</a>
+        <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+    </div>
+  </nav>
 
-<footer>
-© 2026 Cyber Watchmen
-</footer>
+  <main class="page-main">
+    <section class="panel">
+      <h1 class="panel-title">Hakkımızda</h1>
+      <p>
+        Cyber Watchmen, etik siber güvenlik çalışmaları yapan genç bir ekip topluluğudur.
+      </p>
+      <p>
+        CTF yarışmaları, OSINT (Açık Kaynak İstihbaratı) analizleri, saldırı ve savunma teknikleri üzerinde
+        pratik yapan, bilgiyi paylaşmayı ve geliştirmeyi hedefleyen bir ekibiz.
+      </p>
+      <p>
+        Amacımız; hem kendi kabiliyetlerimizi geliştirmek, hem de çevremizi siber güvenlik
+        konusunda bilinçlendirerek daha güvenli bir dijital dünya oluşturmak.
+      </p>
+    </section>
+  </main>
 
-<script src="script.js"></script>
+  <footer class="footer">
+    © 2026 Cyber Watchmen
+  </footer>
+
+  <script src="script.js"></script>
+
 </body>
-<video autoplay muted loop id="bgVideo">
-  <source src="" type="video/mp4">
-</video>
+
 
 
 </html>

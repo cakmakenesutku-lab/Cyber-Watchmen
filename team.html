@@ -1,109 +1,112 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Takım</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Watchmen | Takım</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="about.html">Hakkımızda</a>
-<a href="team.html">Takım</a>
-<a href="contact.html">İletişim</a>
-</nav>
+  <video autoplay muted loop id="bgVideo">
+    <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
+  </video>
 
-<audio id="bgMusic" loop autoplay muted>
-    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
-</audio>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Ana Sayfa</a>
+        <a href="about.html" class="nav-link">Hakkımızda</a>
+        <a href="team.html" class="nav-link active">Takım</a>
+        <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+    </div>
+  </nav>
 
-<script>
-window.addEventListener("load", function() {
-    const music = document.getElementById("bgMusic");
-    music.play().then(() => {
-        music.muted = false; // başladıktan sonra sesi açar
-    }).catch(err => {
-        console.log("Autoplay engellendi");
-    });
-});
-</script>
-<section>
-<h1>Takım Üyeleri</h1>
+  <main class="page-main">
+    <section class="panel">
+      <h1 class="panel-title">Takım Üyeleri</h1>
+      <p class="panel-subtitle">İsme tıklayarak iletişim kanallarını açabilirsiniz.</p>
 
-<div class="card member" onclick="toggleSocial(this)">
-Enes - Takım Lideri
-<div class="social-box">
-<a href="tel:05519275363">📞</a>
-<a href="https://wa.me/905519275363" target="_blank">💬</a>
-<a href="https://instagram.com/codesource_tr" target="_blank">📸</a>
-</div>
-</div>
+      <div class="team-grid">
 
+        <div class="card member" onclick="toggleSocial(this)">
+          <div class="member-main">
+            <span class="member-role-tag">Takım Lideri</span>
+            <h2>Enes</h2>
+            <p>Saldırı & savunma tarafını yöneten, ekibin koordinasyonundan sorumlu lider.</p>
+          </div>
+          <div class="social-box">
+            <a href="tel:05519275363" title="Ara"><i class="icon-phone">📞</i></a>
+            <a href="https://wa.me/905519275363" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/codesource_tr" target="_blank" title="Instagram">📸</a>
+          </div>
+        </div>
 
-<div class="card member" onclick="toggleSocial(this)">
-Eymen - Teknik Lider
-<div class="social-box">
-<a href="tel:05523552764">📞</a>
-<a href="https://wa.me/905523552764" target="_blank">💬</a>
-<a href="https://instagram.com/itseymwnn" target="_blank">📸</a>
-</div>
-</div>
+        <div class="card member" onclick="toggleSocial(this)">
+          <div class="member-main">
+            <span class="member-role-tag">Teknik Lider</span>
+            <h2>Eymen</h2>
+            <p>Teknik mimari, altyapı ve karmaşık CTF senaryolarında yol gösterici.</p>
+          </div>
+          <div class="social-box">
+            <a href="tel:05523552764" title="Ara">📞</a>
+            <a href="https://wa.me/905523552764" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/itseymwnn" target="_blank" title="Instagram">📸</a>
+          </div>
+        </div>
 
+        <div class="card member" onclick="toggleSocial(this)">
+          <div class="member-main">
+            <span class="member-role-tag">Siber Savunma Uzmanı</span>
+            <h2>Yaşar</h2>
+            <p>Blue team, log analizi ve savunma mekanizmaları üzerine yoğunlaşır.</p>
+          </div>
+          <div class="social-box">
+            <a href="tel:05537712226" title="Ara">📞</a>
+            <a href="https://wa.me/905537712226" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/m_yasxr" target="_blank" title="Instagram">📸</a>
+          </div>
+        </div>
 
-<div class="card member" onclick="toggleSocial(this)">
-Yaşar - Siber Savunma Uzmanı
-<div class="social-box">
-<a href="tel:05537712226">📞</a>
-<a href="https://wa.me/905537712226" target="_blank">💬</a>
-<a href="https://instagram.com/m_yasxr" target="_blank">📸</a>
-</div>
-</div>
+        <div class="card member" onclick="toggleSocial(this)">
+          <div class="member-main">
+            <span class="member-role-tag">Siber Saldırı Uzmanı</span>
+            <h2>Seydi</h2>
+            <p>Red team, exploit geliştirme ve zafiyet analizi tarafında uzmanlaşır.</p>
+          </div>
+          <div class="social-box">
+            <a href="tel:05303394727" title="Ara">📞</a>
+            <a href="https://wa.me/905303394727" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/seydi.ahmet.dmr" target="_blank" title="Instagram">📸</a>
+          </div>
+        </div>
 
+        <div class="card member" onclick="toggleSocial(this)">
+          <div class="member-main">
+            <span class="member-role-tag">Kod Mimarı</span>
+            <h2>Mustafa</h2>
+            <p>Script, otomasyon ve araç geliştirme tarafında kod tabanını şekillendirir.</p>
+          </div>
+          <div class="social-box">
+            <a href="tel:05334984964" title="Ara">📞</a>
+            <a href="https://wa.me/905334984964" target="_blank" title="WhatsApp">💬</a>
+            <a href="https://instagram.com/kaplan_mk2727" target="_blank" title="Instagram">📸</a>
+          </div>
+        </div>
 
-<div class="card member" onclick="toggleSocial(this)">
-Seydi - Siber Saldırı Uzmanı
-<div class="social-box">
-<a href="tel:05303394727">📞</a>
-<a href="https://wa.me/905303394727" target="_blank">💬</a>
-<a href="https://instagram.com/seydi.ahmet.dmr" target="_blank">📸</a>
-</div>
-</div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="footer">
+    © 2026 Cyber Watchmen
+  </footer>
 
-<div class="card member" onclick="toggleSocial(this)">
-Mustafa - Kod Mimarı Uzmanı
-<div class="social-box">
-<a href="tel:05334984964">📞</a>
-<a href="https://wa.me/905334984964" target="_blank">💬</a>
-<a href="https://instagram.com/kaplan_mk2727" target="_blank">📸</a>
-</div>
-</div>
+  <script src="script.js"></script>
 
-</section>
-
-<footer>
-© 2026 Cyber Watchmen
-</footer>
-
-<script src="script.js"></script>
-</body>
-<video autoplay muted loop id="bgVideo">
-  <source src="" type="video/mp4">
-</video>
-
-<style>
-#bgVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-</style>
-
-<script src="script.js"></script>
+  
 </body>
 </html>
+

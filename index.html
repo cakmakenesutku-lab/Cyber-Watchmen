@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cyber Watchmen</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Watchmen | Ana Sayfa</title>
+  <meta name="description" content="Cyber Watchmen - Dijital dünyanın koruyucuları. Genç ve dinamik etik siber güvenlik ekibi.">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-home">
 
-<video autoplay muted loop id="bgVideo">
-  <source src="" type="video/mp4">
-</video>
+  <!-- ARKA PLAN VİDEO -->
+  <video autoplay muted loop id="bgVideo">
+    <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
+  </video>
 
-<nav>
-<a href="index.html">Ana Sayfa</a>
-<a href="about.html">Hakkımızda</a>
-<a href="team.html">Takım</a>
-<a href="contact.html">İletişim</a>
-</nav>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Ana Sayfa</a>
+        <a href="about.html" class="nav-link">Hakkımızda</a>
+        <a href="team.html" class="nav-link">Takım</a>
+        <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+    </div>
+  </nav>
 
-<audio id="bgMusic" loop autoplay muted>
+  <!-- ARKA PLAN MÜZİK -->
+  <audio id="bgMusic" loop>
     <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
-</audio>
+  </audio>
 
-<script>
-window.addEventListener("load", function() {
-    const music = document.getElementById("bgMusic");
-    music.play().then(() => {
-        music.muted = false; // başladıktan sonra sesi açar
-    }).catch(err => {
-        console.log("Autoplay engellendi");
-    });
-});
-</script>
-<header>
-<img src="WhatsApp_Image_2026-02-11_at_20.23.14-removebg-preview.png" class="logo">
-<h1>CYBER WATCHMEN</h1>
-<p>Dijital Dünyanın Koruyucuları</p>
-<button onclick="startMusic()">Sistemi Başlat</button>
-<div class="system-message">✔ Sistem Aktif Edildi</div>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
 
-<section>
-<h2>Misyonumuz</h2>
-<p>Genç ve dinamik bir siber güvenlik ekibi olarak dijital dünyayı korumayı hedefliyoruz.</p>
-</section>
+    <div class="hero-content">
+      <img src="WhatsApp_Image_2026-02-11_at_20.23.14-removebg-preview.png" class="logo" alt="Cyber Watchmen Logo">
 
-<footer>
-© 2026 Cyber Watchmen
-</footer>
+      <h1 class="glitch" data-text="CYBER WATCHMEN">CYBER WATCHMEN</h1>
+      <p class="hero-subtitle">Dijital Dünyanın Koruyucuları</p>
 
-<script src="script.js"></script>
+      <button class="btn-primary" onclick="startSystem()">
+        <span class="btn-dot"></span>
+        Sistemi Başlat
+      </button>
 
+      <div class="system-message" id="systemMessage">
+        <span class="status-dot"></span>
+        ✔ Sistem Aktif Edildi · Bağlantı güvenli
+      </div>
+    </div>
+  </header>
 
+  <!-- MİSYON / BİLGİ -->
+  <main>
+    <section class="section section-terminal">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">root@cyber-watchmen:~</span>
+        </div>
+        <div class="terminal-body">
+          <p class="prompt">$ whoami</p>
+          <p class="output">Genç, dinamik ve etik siber güvenlik ekibi.</p>
+
+          <p class="prompt">$ mission</p>
+          <p class="output">
+            CTF yarışmaları, OSINT analizleri ve savunma teknikleri ile dijital dünyayı korumayı hedefliyoruz.
+          </p>
+
+          <p class="prompt">$ links</p>
+          <p class="output">
+            [1] <a href="team.html">Takım Üyeleri</a> ·
+            [2] <a href="about.html">Hakkımızda</a> ·
+            [3] <a href="contact.html">İletişim</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Cyber Watchmen · Tüm hakları saklıdır.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
