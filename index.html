@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Watchmen | Ana Sayfa</title>
   <meta name="description" content="Cyber Watchmen - Dijital dünyanın koruyucuları. Genç ve dinamik etik siber güvenlik ekibi.">
+  <meta name="theme-color" content="#050811">
+  <meta property="og:title" content="Cyber Watchmen">
+  <meta property="og:description" content="Dijital dünyanın koruyucuları. Genç ve dinamik etik siber güvenlik ekibi.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-home">
 
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
   <!-- ARKA PLAN VİDEO -->
-  <video autoplay muted loop id="bgVideo">
+  <video autoplay muted loop playsinline preload="metadata" id="bgVideo" aria-hidden="true">
     <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
   </video>
 
@@ -18,17 +29,26 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link active">Ana Sayfa</a>
+      <div class="nav-links" id="navMenu" data-js="nav-menu" aria-label="Site menüsü">
+        <a href="index.html" class="nav-link active" aria-current="page">Ana Sayfa</a>
         <a href="about.html" class="nav-link">Hakkımızda</a>
         <a href="team.html" class="nav-link">Takım</a>
         <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+      <div class="nav-right">
+        <button class="audio-toggle" type="button" data-js="audio-toggle" data-state="off" aria-pressed="false">
+          <span aria-hidden="true">🔊</span>
+          <span data-js="audio-label">Ses: Kapalı</span>
+        </button>
+        <button class="nav-toggle" type="button" data-js="nav-toggle" aria-controls="navMenu" aria-expanded="false">
+          Menü
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ARKA PLAN MÜZİK -->
-  <audio id="bgMusic" loop>
+  <audio id="bgMusic" loop preload="none">
     <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
   </audio>
 
@@ -42,10 +62,21 @@
       <h1 class="glitch" data-text="CYBER WATCHMEN">CYBER WATCHMEN</h1>
       <p class="hero-subtitle">Dijital Dünyanın Koruyucuları</p>
 
-      <button class="btn-primary" onclick="startSystem()">
-        <span class="btn-dot"></span>
-        Sistemi Başlat
-      </button>
+      <div class="hero-badges" aria-label="Öne çıkanlar">
+        <span class="badge"><strong>Etik</strong> Siber Güvenlik</span>
+        <span class="badge"><strong>CTF</strong> · OSINT · Blue/Red</span>
+        <span class="badge"><strong>Genç</strong> ve dinamik ekip</span>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-primary" type="button" data-js="start-system">
+          <span class="btn-dot"></span>
+          Sistem Aktif Dikkat Et
+        </button>
+        <a class="btn-secondary" href="team.html">
+          Takımı Gör
+        </a>
+      </div>
 
       <div class="system-message" id="systemMessage">
         <span class="status-dot"></span>
@@ -55,7 +86,7 @@
   </header>
 
   <!-- MİSYON / BİLGİ -->
-  <main>
+  <main id="main">
     <section class="section section-terminal">
       <div class="terminal">
         <div class="terminal-header">
@@ -79,6 +110,70 @@
             [2] <a href="about.html">Hakkımızda</a> ·
             [3] <a href="contact.html">İletişim</a>
           </p>
+          <p class="hint">İpucu: Mobilde menüden, sesten de üst bardan kontrol edebilirsin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="kicker">Yetkinlikler</span>
+          Ne yapıyoruz?
+        </h2>
+        <p class="section-lead">
+          Cyber Watchmen, dijital tehditleri anlamak ve önlemek için pratik odaklı çalışan bir topluluktur.
+          Hem savunma hem saldırı perspektifiyle; analiz, raporlama ve eğitim kültürünü önemser.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>CTF & Senaryo</h3>
+            <p>Web, forensics ve pwn senaryolarında pratik yapar; takım içi bilgi paylaşımı ile hızlanırız.</p>
+            <div class="feature-meta">
+              <span class="chip">Write-up</span>
+              <span class="chip">Lab</span>
+              <span class="chip">Ekip çalışması</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <h3>OSINT & Analiz</h3>
+            <p>Açık kaynaklardan veri toplama, doğrulama ve raporlama yaklaşımıyla bulguları aksiyona çeviririz.</p>
+            <div class="feature-meta">
+              <span class="chip">Doğrulama</span>
+              <span class="chip">Rapor</span>
+              <span class="chip">Threat intel</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <h3>Blue Team</h3>
+            <p>Log okuma, temel tespit mantığı ve savunma bakışıyla olaylara daha hızlı yanıt vermeyi hedefleriz.</p>
+            <div class="feature-meta">
+              <span class="chip">Log</span>
+              <span class="chip">Tespit</span>
+              <span class="chip">Hardening</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <h3>Red Team</h3>
+            <p>Zafiyet analizi, PoC mantığı ve kontrollü test yaklaşımıyla güvenliği güçlendiren bakış açısı.</p>
+            <div class="feature-meta">
+              <span class="chip">Vuln</span>
+              <span class="chip">PoC</span>
+              <span class="chip">Pentest</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta">
+          <p><strong>Birlikte çalışalım.</strong> Takım üyelerine hızlıca ulaşmak veya topluluğa katılmak için iletişim kanallarına göz at.</p>
+          <div class="btn-row" style="justify-content:flex-start;">
+            <a class="btn-secondary" href="contact.html">İletişim</a>
+            <a class="btn-secondary" href="about.html">Hakkımızda</a>
+          </div>
         </div>
       </div>
     </section>

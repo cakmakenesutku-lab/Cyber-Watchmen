@@ -4,97 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Watchmen | Takım</title>
+  <meta name="description" content="Cyber Watchmen takım üyeleri ve iletişim kanalları.">
+  <meta name="theme-color" content="#050811">
+  <meta property="og:title" content="Cyber Watchmen | Takım">
+  <meta property="og:description" content="Takım üyelerini ve iletişim kanallarını görüntüleyin.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <video autoplay muted loop id="bgVideo">
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <video autoplay muted loop playsinline preload="metadata" id="bgVideo" aria-hidden="true">
     <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
   </video>
 
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navMenu" data-js="nav-menu" aria-label="Site menüsü">
         <a href="index.html" class="nav-link">Ana Sayfa</a>
         <a href="about.html" class="nav-link">Hakkımızda</a>
-        <a href="team.html" class="nav-link active">Takım</a>
+        <a href="team.html" class="nav-link active" aria-current="page">Takım</a>
         <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+      <div class="nav-right">
+        <button class="audio-toggle" type="button" data-js="audio-toggle" data-state="off" aria-pressed="false">
+          <span aria-hidden="true">🔊</span>
+          <span data-js="audio-label">Ses: Kapalı</span>
+        </button>
+        <button class="nav-toggle" type="button" data-js="nav-toggle" aria-controls="navMenu" aria-expanded="false">
+          Menü
+        </button>
       </div>
     </div>
   </nav>
 
-  <main class="page-main">
+  <audio id="bgMusic" loop preload="none">
+    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="page-main" id="main">
     <section class="panel">
       <h1 class="panel-title">Takım Üyeleri</h1>
       <p class="panel-subtitle">İsme tıklayarak iletişim kanallarını açabilirsiniz.</p>
+      <p class="hint">Klavye ile de açabilirsin: karta odaklan → Enter / Space.</p>
+      <div class="cta" style="margin-top:14px;">
+        <p><strong>Not:</strong> Dış bağlantılar yeni sekmede açılır. Telefon araması için 📞 ikonunu kullan.</p>
+        <div class="btn-row" style="justify-content:flex-start;">
+          <a class="btn-secondary" href="contact.html">İletişim</a>
+          <a class="btn-secondary" href="about.html">Hakkımızda</a>
+        </div>
+      </div>
 
       <div class="team-grid">
 
-        <div class="card member" onclick="toggleSocial(this)">
+        <button class="card member" type="button" data-js="member">
           <div class="member-main">
             <span class="member-role-tag">Takım Lideri</span>
             <h2>Enes</h2>
             <p>Saldırı & savunma tarafını yöneten, ekibin koordinasyonundan sorumlu lider.</p>
           </div>
           <div class="social-box">
-            <a href="tel:05519275363" title="Ara"><i class="icon-phone">📞</i></a>
-            <a href="https://wa.me/905519275363" target="_blank" title="WhatsApp">💬</a>
-            <a href="https://instagram.com/codesource_tr" target="_blank" title="Instagram">📸</a>
+            <a href="https://instagram.com/codesource_tr" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
           </div>
-        </div>
+        </button>
 
-        <div class="card member" onclick="toggleSocial(this)">
+        <button class="card member" type="button" data-js="member">
           <div class="member-main">
             <span class="member-role-tag">Teknik Lider</span>
             <h2>Eymen</h2>
             <p>Teknik mimari, altyapı ve karmaşık CTF senaryolarında yol gösterici.</p>
           </div>
           <div class="social-box">
-            <a href="tel:05523552764" title="Ara">📞</a>
-            <a href="https://wa.me/905523552764" target="_blank" title="WhatsApp">💬</a>
-            <a href="https://instagram.com/itseymwnn" target="_blank" title="Instagram">📸</a>
+            <a href="https://instagram.com/itseymwnn" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
           </div>
-        </div>
+        </button>
 
-        <div class="card member" onclick="toggleSocial(this)">
+        <button class="card member" type="button" data-js="member">
           <div class="member-main">
             <span class="member-role-tag">Siber Savunma Uzmanı</span>
             <h2>Yaşar</h2>
             <p>Blue team, log analizi ve savunma mekanizmaları üzerine yoğunlaşır.</p>
           </div>
           <div class="social-box">
-            <a href="tel:05537712226" title="Ara">📞</a>
-            <a href="https://wa.me/905537712226" target="_blank" title="WhatsApp">💬</a>
-            <a href="https://instagram.com/m_yasxr" target="_blank" title="Instagram">📸</a>
+            <a href="https://instagram.com/m_yasxr" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
           </div>
-        </div>
+        </button>
 
-        <div class="card member" onclick="toggleSocial(this)">
+        <button class="card member" type="button" data-js="member">
           <div class="member-main">
             <span class="member-role-tag">Siber Saldırı Uzmanı</span>
             <h2>Seydi</h2>
             <p>Red team, exploit geliştirme ve zafiyet analizi tarafında uzmanlaşır.</p>
           </div>
           <div class="social-box">
-            <a href="tel:05303394727" title="Ara">📞</a>
-            <a href="https://wa.me/905303394727" target="_blank" title="WhatsApp">💬</a>
-            <a href="https://instagram.com/seydi.ahmet.dmr" target="_blank" title="Instagram">📸</a>
+            <a href="https://instagram.com/seydi.ahmet.dmr" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
           </div>
-        </div>
+        </button>
 
-        <div class="card member" onclick="toggleSocial(this)">
+        <button class="card member" type="button" data-js="member">
           <div class="member-main">
             <span class="member-role-tag">Kod Mimarı</span>
             <h2>Mustafa</h2>
             <p>Script, otomasyon ve araç geliştirme tarafında kod tabanını şekillendirir.</p>
           </div>
           <div class="social-box">
-            <a href="tel:05334984964" title="Ara">📞</a>
-            <a href="https://wa.me/905334984964" target="_blank" title="WhatsApp">💬</a>
-            <a href="https://instagram.com/kaplan_mk2727" target="_blank" title="Instagram">📸</a>
+            <a href="https://instagram.com/kaplan_mk2727" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
           </div>
-        </div>
+        </button>
 
       </div>
     </section>

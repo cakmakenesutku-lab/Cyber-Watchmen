@@ -4,29 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Watchmen | Hakkımızda</title>
+  <meta name="description" content="Cyber Watchmen ekibi hakkında: etik siber güvenlik, CTF, OSINT ve savunma teknikleri.">
+  <meta name="theme-color" content="#050811">
+  <meta property="og:title" content="Cyber Watchmen | Hakkımızda">
+  <meta property="og:description" content="Etik siber güvenlik çalışmaları yapan Cyber Watchmen ekibini tanıyın.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <video autoplay muted loop id="bgVideo">
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <video autoplay muted loop playsinline preload="metadata" id="bgVideo" aria-hidden="true">
     <source src="11584395-uhd_3840_2160_60fps.mp4" type="video/mp4">
   </video>
 
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">CYBER WATCHMEN</a>
-      <div class="nav-links">
+      <div class="nav-links" id="navMenu" data-js="nav-menu" aria-label="Site menüsü">
         <a href="index.html" class="nav-link">Ana Sayfa</a>
-        <a href="about.html" class="nav-link active">Hakkımızda</a>
+        <a href="about.html" class="nav-link active" aria-current="page">Hakkımızda</a>
         <a href="team.html" class="nav-link">Takım</a>
         <a href="contact.html" class="nav-link">İletişim</a>
+      </div>
+      <div class="nav-right">
+        <button class="audio-toggle" type="button" data-js="audio-toggle" data-state="off" aria-pressed="false">
+          <span aria-hidden="true">🔊</span>
+          <span data-js="audio-label">Ses: Kapalı</span>
+        </button>
+        <button class="nav-toggle" type="button" data-js="nav-toggle" aria-controls="navMenu" aria-expanded="false">
+          Menü
+        </button>
       </div>
     </div>
   </nav>
 
-  <main class="page-main">
+  <audio id="bgMusic" loop preload="none">
+    <source src="4379051-hacker-alarm-124960.mp3" type="audio/mpeg">
+  </audio>
+
+  <main class="page-main" id="main">
     <section class="panel">
       <h1 class="panel-title">Hakkımızda</h1>
+      <p class="panel-subtitle">Etik siber güvenlik, pratik ve paylaşım odaklı bir topluluk.</p>
       <p>
         Cyber Watchmen, etik siber güvenlik çalışmaları yapan genç bir ekip topluluğudur.
       </p>
@@ -38,6 +64,13 @@
         Amacımız; hem kendi kabiliyetlerimizi geliştirmek, hem de çevremizi siber güvenlik
         konusunda bilinçlendirerek daha güvenli bir dijital dünya oluşturmak.
       </p>
+      <div class="cta" style="margin-top:18px;">
+        <p><strong>Takımı tanı.</strong> Roller ve iletişim kanalları için takım sayfasına geçebilirsin.</p>
+        <div class="btn-row" style="justify-content:flex-start;">
+          <a class="btn-secondary" href="team.html">Takım</a>
+          <a class="btn-secondary" href="contact.html">İletişim</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -52,3 +85,4 @@
 
 
 </html>
+
